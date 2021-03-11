@@ -5,8 +5,78 @@
     <meta charset="UTF-8">
     <title>${require('../config/site.config.js').site_name}</title>
     <meta name="description" content="${require('../config/site.config.js').site_description}"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Rubik:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
 <body>
+
+<section class="hero" id="hero">
+    <img src="./img/hero.svg" alt="Running man" class="hero-img d-none d-xl-block">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <header class="d-flex justify-content-between">
+                    <nav class="d-flex align-items-center">
+                        <a href="/" class="logo">
+                            <img src="./img/logo.svg" alt="Logo">
+                        </a>
+
+                        <div class="menu">
+                            <a href="#" class="menu-item">About</a>
+                            <a href="#" class="menu-item">Gallery</a>
+                            <a href="#" class="menu-item">Pricing</a>
+                            <a href="#" class="menu-item">FAQ</a>
+                            <a href="#" class="menu-item">Benefits</a>
+                        </div>
+                    </nav>
+
+                    <div>
+                        <a href="#" class="button button-ghost me-4">Sign in</a>
+                        <a href="#" class="button button-cta">Sign up</a>
+                    </div>
+                </header>
+            </div>
+
+            <div class="col-12 col-xl-5 text-center text-xl-start">
+                <div class="content">
+                    <h1 class="title">
+                        Many reasons to get up and start to get back in the business
+                    </h1>
+
+                    <p class="description">
+                        The harder you work for something, the greater you’ll feel when you achieve
+                        it.
+                    </p>
+
+                    <div class="actions">
+                        <a href="#" class="button button-ghost me-4">Sign in</a>
+                        <a href="#" class="button button-cta">Sign up</a>
+                    </div>
+
+                    <div class="video-banner text-start">
+                        <a href="#" class="preview">
+                            <img src="./img/play-icon.svg" alt="Play icon">
+                        </a>
+
+                        <div>
+                            <p class="description">
+                                The harder you work for something, the greater you’ll feel when you
+                                achieve it.
+                            </p>
+
+                            <a href="#" class="preview-button">
+                                Watch preview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>

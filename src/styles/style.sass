@@ -4,5 +4,126 @@
 @import "utils/reset"
 @import "utils/animations"
 
+@font-face
+    font-family: 'Gilroy'
+    src: url('../fonts/Gilroy-SemiBold.ttf')  format('truetype')
+    font-weight: $semi-bold-text
+
 html
     scroll-behavior: smooth
+
+body
+    font-family: 'Gilroy', sans-serif
+    background: $background-color-main
+    color: $text-color-main
+    font-weight: $semi-bold-text
+    line-height: 22px
+    font-size: 16px
+
+h1
+    font-family: 'Inter', sans-serif
+    font-weight: $bold-text
+    color: $text-color-heading
+    font-size: 24px
+    line-height: 30px
+
+    +screen-up(sm)
+        font-size: 34px
+        line-height: 40px
+
+    +screen-up(lg)
+        font-size: 44px
+        line-height: 50px
+
+h2
+    font-family: 'Inter', sans-serif
+    font-size: 42px
+    line-height: 50px
+
+.button
+    font-family: 'Rubik', sans-serif
+    font-weight: $regular-text
+    display: inline-block
+    text-transform: uppercase
+    font-size: 12px
+    line-height: 20px
+    padding: 8px 25px
+    border-radius: 3px
+
+    &-ghost
+        color: $text-color-accent
+        border: 1px solid $accent
+
+        &:hover
+            color: $text-color-accent
+
+    &-cta
+        color: $text-color-white
+        background: $accent
+
+        &:hover
+            color: $text-color-white
+
+header
+    margin: 0 0 10%
+
+.hero
+    position: relative
+    min-height: 100vh
+    padding: 5% 0 6%
+
+    & .logo
+        margin: 0 44px 0 0
+
+    & .title
+        margin: 0 0 20px
+
+    & .description
+        margin: 0 0 40px
+
+    & .actions
+        margin: 0 0 60px
+
+    &-img
+        position: absolute
+        top: 50%
+        right: 10%
+        width: 40%
+        height: auto
+        transform: translateY(-50%)
+
+.menu
+    display: flex
+    color: $text-color-grey
+    text-transform: uppercase
+    font-size: 12px
+
+    &-item:not(:last-child)
+        margin: 0 22px 0 0
+
+.video-banner
+    display: flex
+    flex-direction: column
+
+    +screen-up(sm)
+        flex-direction: row
+        justify-content: center
+
+    +screen-up(xl)
+        justify-content: start
+
+    & .preview
+        padding: 16px 45px
+        text-align: center
+        background: #361C5D
+        border-radius: 4px
+        margin: 0 0 10px
+
+        +screen-up(sm)
+            margin: 0 20px 0 0
+
+    & .description
+        margin: 0 0 6px
+
+    & .preview-button
+        color: $grey-400
