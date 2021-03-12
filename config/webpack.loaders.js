@@ -10,6 +10,7 @@ const html = {
         {
             loader: 'html-loader',
             options: {
+                attrs: ['div:data-src', 'img:src'],
                 interpolate: true,
                 removeComments: true,
             },

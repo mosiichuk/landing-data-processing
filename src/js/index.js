@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
     initMenuBurger();
+
+    if (window.matchMedia('(min-width: 768px)')) {
+        const ps = new ParticleSlider({
+            ptlGap: 0,
+            mouseForce: 100,
+            monochrome: false,
+            ptlSize: 0.5,
+        });
+
+        const ptl = new ps.Particle(ps);
+
+        ptl.ttl = 20;
+    }
 });
 
 document.addEventListener("scroll", () => {

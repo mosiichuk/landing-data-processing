@@ -10,6 +10,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const config = require('./site.config');
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
+
+const copyPlugin = new CopyPlugin({
+    patterns: [
+        {
+            from: 'js/particle.js',
+            to: 'js/particle.js',
+            toType: 'file'
+        },
+    ],
+});
 
 const optimizeCss = new CssMinimizerPlugin({
     minimizerOptions: {
@@ -70,6 +81,7 @@ const env = new webpack.DefinePlugin({
 });
 
 module.exports = [
+    config.isProduction && copyPlugin,
     clean,
     env,
     cssExtract,
