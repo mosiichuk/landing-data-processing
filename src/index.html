@@ -16,7 +16,8 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <nav class="d-flex align-items-center justify-content-between justify-content-md-start">
+                <nav
+                    class="d-flex align-items-center justify-content-between justify-content-md-start">
                     <a href="/" class="logo">
                         <img src="./img/logo.svg" alt="Logo">
                     </a>
@@ -73,12 +74,12 @@
                     </p>
 
                     <div class="actions">
-                        <a href="#" class="button button-ghost me-4">Sign in</a>
-                        <a href="#" class="button button-cta">Sign up</a>
+                        <a href="#" class="button button-cta me-4">Learn more</a>
+                        <a href="#" class="button button-ghost">Demo </a>
                     </div>
 
                     <div class="video-banner text-start">
-                        <a href="#" class="preview">
+                        <a class="preview" data-modal-id="video">
                             <img src="./img/play-icon.svg" alt="Play icon">
                         </a>
 
@@ -88,7 +89,7 @@
                                 achieve it.
                             </p>
 
-                            <a href="#" class="preview-button">
+                            <a class="preview-button" data-modal-id="video">
                                 Watch preview
                             </a>
                         </div>
@@ -98,6 +99,21 @@
         </div>
     </div>
 </section>
+
+<div class="modal" id="video" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-youtube">
+            <a class="close" role="button" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </a>
+
+            <iframe src="https://www.youtube.com/embed/Y7dpJ0oseIA"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
 
 <script src="./js/particle.js"></script>
 </body>
