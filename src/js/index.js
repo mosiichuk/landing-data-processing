@@ -4,12 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener("scroll", () => {
-    const header = document.getElementById('header');
+    if (window.matchMedia('(max-width: 767.8px)').matches) {
+        const header = document.getElementById('header');
 
-    if (window.pageYOffset > 50) {
-        header.classList.add("header-scroll");
-    } else {
-        header.classList.remove("header-scroll");
+        if (window.pageYOffset > 50) {
+            header.classList.add("header-scroll");
+        } else {
+            header.classList.remove("header-scroll");
+        }
     }
 });
 
