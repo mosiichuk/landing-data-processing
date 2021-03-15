@@ -7,9 +7,6 @@ export default class Counter {
     }
 
     onScroll = () => {
-        console.log("FROM TOP " + this.startFromElement.getBoundingClientRect().top)
-        console.log("DIFFERENCE " + (this.startFromElement.getBoundingClientRect().top - this.offset));
-
         if (this.startFromElement.getBoundingClientRect().top - this.offset > 0 || this.counterStarted)
             return;
 
