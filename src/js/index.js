@@ -1,6 +1,14 @@
+import Counter from "./counter";
+
 document.addEventListener('DOMContentLoaded', function () {
     initMenuBurger();
     initParticleSlider();
+});
+
+const counter = new Counter({
+    startFromElementId: "stats",
+    countersSelector: "#stats .stats-item .title span",
+    offset: 500
 });
 
 document.addEventListener("scroll", () => {
@@ -13,6 +21,8 @@ document.addEventListener("scroll", () => {
             header.classList.remove("header-scroll");
         }
     }
+
+    counter.onScroll();
 });
 
 function initParticleSlider() {
