@@ -520,3 +520,77 @@ h2
 
             +screen-up(sm)
                 min-width: 120px
+
+.footer
+    padding: 100px 0 130px
+
+    & .social
+        display: flex
+
+        & .icon
+            padding: 8px
+            background: #262857
+            border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+
+        & .icon:not(:last-child)
+            margin: 0 16px 0 0
+
+    & .navigation
+        padding-top: 80px
+        padding-bottom: 120px
+        color: $text-color-white
+        font-family: 'Inter', sans-serif
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+
+        +screen-up(sm)
+            justify-content: space-between
+
+        & div
+            flex: 0 0 35%
+
+            +screen-up(sm)
+                flex: 0 0 100px
+                justify-content: space-between
+
+        & div:not(:last-child)
+            margin: 0 0 30px
+
+            +screen-up(sm)
+                margin: 0
+
+
+        & h3
+            font-weight: $bold-text
+            font-size: 15px
+            line-height: 18px
+            letter-spacing: 0.2px
+            margin:  0 0 25px
+
+        & p
+            font-weight: $regular-text
+            margin:  0 0 18px
+            font-size: 15px
+            line-height: 20px
+            letter-spacing: 0.2px
+
+    & .copyright
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        +screen-up(sm)
+            flex-direction: row
+
+
+        & .info:not(:last-child)
+            +screen-up(sm)
+                margin-right: 32px
+
+        & a.info:hover
+            color: $accent
